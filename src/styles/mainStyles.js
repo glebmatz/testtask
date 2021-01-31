@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import { constants } from './constants';
 
 export const styles = StyleSheet.create({
@@ -19,7 +19,8 @@ export const styles = StyleSheet.create({
         borderBottomColor: '#ababab',
         borderBottomWidth: 1,
         color: '#333',
-        fontSize: 16
+        fontSize: 16,
+        height: Platform.OS == 'ios' ? 44 : undefined
     },
     inputFocused: {
         borderBottomColor: '#1a51eb'
